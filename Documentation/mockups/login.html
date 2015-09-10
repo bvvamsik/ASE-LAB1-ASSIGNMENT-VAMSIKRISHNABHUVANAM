@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+  <title>Login Form</title>
+  
+  <style>
+	<!--	html {
+		background: url('img/wood_pattern.png');
+		font-size: 10pt;
+	}-->	
+	img 
+	{
+		opacity: 0.6;
+		filter: alpha(opacity=75); /* For IE8 and earlier */
+	}
+	div {
+    width: 320px;
+    padding: 10px;
+	align: center;
+    border: 5px solid gray;
+    margin: auto; 
+	max-width:100%; 
+	max-height:100%;
+	display:block;
+} 
+
+    .form-input {
+      padding: 10px;
+      border: solid 1px gainsboro;
+      -webkit-transition: box-shadow 0.3s, border 0.3s;
+      -moz-transition: box-shadow 0.3s, border 0.3s;
+      -o-transition: box-shadow 0.3s, border 0.3s;
+      transition: box-shadow 0.3s, border 0.3s;
+    }
+    .btn {
+      background: #3498db;
+      background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+      background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+      background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+      background-image: -o-linear-gradient(top, #3498db, #2980b9); 
+      background-image: linear-gradient(to bottom, #3498db, #2980b9);
+      -webkit-border-radius: 4;
+      -moz-border-radius: 4;
+      border-radius: 4px;
+      font-family: Arial;
+      color: #ffffff;
+      padding: 10px 20px 10px 20px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #3cb0fd;
+      background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+      background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+      text-decoration: none;
+    }
+  </style>
+  <title>Chat App Login</title>
+</head>
+<body>
+
+
+<div align="center" style="height: 195px" style="width: 170px">
+
+<img src="img/ChatApp.png" >
+</div>
+<div align="center" >
+      <h1 style="font-family:calibri">Login Page</h1>
+      <form action="index.html">
+        <p><label style="font-family:calibri">User ID: </label><input class="form-input" type="text" name="loginId" value="" placeholder="yourname@email.com"></p>
+        <p><label style="font-family:calibri">Password: </label><input class="form-input" type="password" name="password" value="" placeholder="Password"></p>
+        <p class="remember_profile_id">
+          <label style="font-family:calibri">
+            <input type="checkbox" name="remember_me" id="remember_me">
+            Remember me on this computer
+          </label>
+        </p>
+        <p class="submit"><input class="btn" type="submit" name="commit" value="Login"></p>
+      </form>
+    
+      <p style="font-family:calibri">Forgot your password? <a href="" style="font-family:calibri">Click here to reset it</a>.</p>
+    </div>
+
+<div align="center" >
+<p><label style="font-family:calibri; font-size:15pt">New User: </label><a href="RegistrationForm.html" style="font-family:calibri; font-size:15pt">Register Here.</a></p>
+</div>
+
+</body>
+</html>

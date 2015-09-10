@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+	
+				<!--	html {
+				background: url('img/wood_pattern.png');
+				font-size: 10pt;
+			}-->	
+			img 
+	{
+		opacity: 0.6;
+		filter: alpha(opacity=75); /* For IE8 and earlier */
+	}
+		.myButton 
+		{
+			-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+			-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+			box-shadow:inset 0px 1px 0px 0px #ffffff;
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+			background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+			background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+			background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+			background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+			background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+			background-color:#ffffff;
+			-moz-border-radius:3px;
+			-webkit-border-radius:3px;
+			border-radius:3px;
+			border:1px solid #dcdcdc;
+			display:inline-block;
+			cursor:pointer;
+			color:#666666;
+			font-family:Arial;
+			font-size:15px;
+			font-weight:bold;
+			padding:18px 76px;
+			width: 80px;
+			text-decoration:none;
+			text-shadow:0px 1px 0px #ffffff;
+		}
+
+		.myButton:hover 
+		{
+			background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+			background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+			background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+			background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+			background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+			background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+			background-color:#f6f6f6;
+			
+		}
+
+		.myButton:active 
+		{
+			position:relative;
+			top:1px;
+		}
+
+		div.fixed 
+		{
+			position: fixed;
+			right: 0;
+			width: 250px;
+		}
+
+		.button 
+		{
+			background: #3498db;
+			border-radius: 4px;
+			font-family: Calibri;
+			color: #ffffff;
+			padding: 15px 20px 15px 20px;
+			text-decoration: none;
+			display:inline-block;
+			cursor:pointer;
+		}
+
+		.button:hover 
+		{
+			border: 1px solid #0a3c59;
+			background: #3e779d;
+			color: #fff;
+		}
+
+		.button:active 
+		{
+			text-shadow: #1e4158 0 1px 0;
+			border: 1px solid #0a3c59;
+			background: #65a9d7;
+			color: #fff;
+		}
+			  
+		table
+		{
+			font-family: Calibri; 
+			color:white; 
+			font-size: 11pt; 
+			font-style: normal;
+			text-align:; 
+			border-collapse: collapse
+		}
+
+		table.inner
+		{
+			border: 0px
+		}
+
+    </style>
+    <title> Text Chat </title>
+  </head>
+  <body>
+    <center>
+		<form action="#" method="POST">
+			<table>
+			  <tr>
+				<th colspan="5"><img src="img/TextChat.jpg"></th>
+			  </tr>
+			  
+			  <tr>
+				<td><a href='TextChat.html' class='button'>Text Chat</a></td>
+				<td><a href='VideoChat.html' class='button'>Video Chat</a></td>
+				<td><a href='Groups.html' class='button'>Groups</a></td>
+				<td><a href='ManageGroups.html' class='button'>Manage Groups</a></td>
+				<td><a href='login.html' class='button'>Log Out</a></td>
+			  </tr>
+			</table>
+			
+			</br>
+			
+			<table cellpadding=0>
+			   <tr>            
+					<td><a href='#' class='myButton'>Sowmya</a></td>
+					<td rowspan="4" colspan="2">
+					<textarea rows="14" cols="50">Your previous messages shows here.</textarea></br>
+					</td>
+				</tr>
+				<tr>
+					<td><a href='#' class='myButton'>Sravanthi</a></td>
+				</tr>
+				<tr>
+					<td><a href='#' class='myButton'>Jabreel</a></td>
+				</tr>
+				<tr>
+					<td><a href='#' class='myButton'>Sushmita</a></td>
+
+				</tr>
+				<tr>
+					<td><a href='#' class='myButton'>Dheeraja</a></td>
+					<td>				
+						<textarea rows="3" cols="50">Your message goes here.</textarea>			    
+					</td>
+					<td>
+						<input class="button" type="submit" name="commit" value="Send">
+					</td>
+				</tr>		  
+			</table>      
+		</form>
+	</center>
+  </body>
+</html>
