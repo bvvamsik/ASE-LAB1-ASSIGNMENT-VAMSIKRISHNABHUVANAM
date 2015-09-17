@@ -1,0 +1,72 @@
+	#map-canvas {
+    width: 650px;
+    height: 450px;
+}
+.weatherbtn
+{
+	position="absolute";
+	left="600px";
+	top="15px";
+}
+
+
+	
+				<!--	html {
+				background: url('img/IndexBcg.jpg');
+				font-size: 10pt;
+			}-->	
+			img 
+	{
+		opacity: 0.6;
+		filter: alpha(opacity=75); /* For IE8 and earlier */
+	}
+		
+
+		div.fixed 
+		{
+			position: fixed;
+			right: 0;
+			width: 250px;
+		}
+
+		.button 
+		{
+			background: #3498db;
+			border-radius: 4px;
+			font-family: Calibri;
+			color: #ffffff;
+			padding: 15px 20px 15px 20px;
+			text-decoration: none;
+			display:inline-block;
+			cursor:pointer;
+		}
+
+		.button:hover 
+		{
+			border: 1px solid #0a3c59;
+			background: #3e779d;
+			color: #fff;
+		}
+
+		.button:active 
+		{
+			text-shadow: #1e4158 0 1px 0;
+			border: 1px solid #0a3c59;
+			background: #65a9d7;
+			color: #fff;
+		}
+			  
+		table
+		{
+			font-family: Calibri; 
+			color:white; 
+			font-size: 11pt; 
+			font-style: normal;
+			text-align:; 
+			border-collapse: collapse
+		}
+
+		table.inner
+		{
+			border: 0px
+		}

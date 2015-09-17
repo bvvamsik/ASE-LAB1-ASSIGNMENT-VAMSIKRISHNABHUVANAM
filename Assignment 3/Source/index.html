@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="" data-ng-app="GoogleDirection">
+  <head>
+  
+    <meta t="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+  <script src="js/controller/prj.js"></script>
+  <link rel="stylesheet" href="css/main.css">  
+  <link rel="stylesheet" href="style.css" />
+  
+  
+    <style>
+	
+
+				<!--	html {
+				background: url('img/IndexBcg.jpg');
+				font-size: 10pt;
+			}-->	
+
+    </style>
+    <title> Welcome to RouteDirec </title>
+  </head>
+  <body onload="defalert()">
+<h1 align="right" style="font-family:calibri">Welcome to RouteDirec. Enjoy our other services like Weather reports.</h1>
+  <center>
+
+<!-------------------------------------------------------------------------------------------------------------->
+	  
+	  <div class="wrapp" data-ng-controller="googlemapoutput" >
+         <div class="row" style="position:absolute;top:25px; left:5px;">
+		 
+                <input type="text"  ng-model="startlocation" id="startlocation" placeholder="Source eg: Kansas City"/>
+                <input type="text"  ng-model="endlocation" id="endlocation" placeholder="Destination eg: Boston"/> 
+                <button class="button" id="btn" ng-click="calcRoute()" style="padding:1px 45px">
+                    Show Direction
+                </button>
+			
+				
+                 <br/></br>
+            </div>
+            <div id="map-canvas" style="height:400px;position:absolute;top:80px;left:5px;"></div>
+        </div>
+		
+		
+		
+	<div style="position:absolute;left:900px;top:70px;border:4px solid grey;opacity=0.5;background-color: #262626;width:250px;height:330px" data-ng-controller="weatherCtrl">
+	    
+		<h1 style="color:#66FFCC;font-family: calibri;">Source Weather</h1>
+		  <h2 style="color:#C8C8C8;font-family: calibri;">Forecast For {{ place.location.city }}</h2>
+			<h3 style="color:#C8C8C8;font-family: calibri;"> Humidity is: {{place.atmosphere.humidity}}</h3>
+			<h3 style="color:#C8C8C8;font-family: calibri;"> Temperature is: {{place.item.condition.temp}}F</h3>
+			<h3><img class="img-thumbnail forecast-img" src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif" /></h3>
+			<h3 style="color:#C8C8C8;font-family: calibri;">Conditions: {{ place.item.condition.text }}</h3>
+		  <input class="button" type="submit" value="Get Weather" ng-click="findWeather()" />
+	  
+	</div>
+		
+	<div style="position:absolute;left:900px;top:400px;border:4px solid grey;opacity=0.5;background-color: #262626;width:250px;height:330px"   data-ng-controller="weatherCtrl1" >
+	
+    
+      
+    <div>
+	<h1 style="color:#66FFCC;font-family: calibri;">Destination Weather</h1>
+      <h2 style="color:#C8C8C8;font-family: calibri;">Forecast For {{ place.location.city }}</h2>
+		<h3 style="color:#C8C8C8;font-family: calibri;"> Humidity is: {{place.atmosphere.humidity}}</h3>
+		<h3 style="color:#C8C8C8;font-family: calibri;"> Temperature is: {{place.item.condition.temp}}F</h3>
+      <h3><img class="img-thumbnail forecast-img" src="http://l.yimg.com/a/i/us/we/52/{{place.item.condition.code}}.gif" /></h3>
+	  <h3 style="color:#C8C8C8;font-family: calibri;">Conditions: {{ place.item.condition.text }}</h3>
+	  <input class="button" type="submit" value="Get Weather" ng-click="findWeather()" />
+	  
+	  
+    </div>
+			
+		</div>
+		
+		<div class="loginbtn" style="position:absolute;left:10px;top:500px;">
+<a href="login.html" class="button">Logout</a>
+</div>	
+
+
+
+<!-------------------------------------------------------------------------------------------------------------->
+    </center>
+  </body>
+</html>
+<script>
+function defalert(){
+
+name = localStorage.getItem("name");
+    if (name == null || name == "null"){
+      alert("Hi, Stranger!");
+    } else {
+      alert ("Welcome, " + name + "!");
+    }
+}
+</script>
