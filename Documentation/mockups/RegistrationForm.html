@@ -17,6 +17,32 @@ text-align: center; text-decoration: underline }
 table{font-family: Calibri; color:black; font-style: normal;
 text-align:; border-collapse: collapse}
 table.inner{border: 0px}
+.button 
+		{
+			background: #3498db;
+			border-radius: 4px;
+			font-family: Calibri;
+			color: #ffffff;
+			padding: 15px 20px 15px 20px;
+			text-decoration: none;
+			display:inline-block;
+			cursor:pointer;
+		}
+
+		.button:hover 
+		{
+			border: 1px solid #0a3c59;
+			background: #3e779d;
+			color: #fff;
+		}
+
+		.button:active 
+		{
+			text-shadow: #1e4158 0 1px 0;
+			border: 1px solid #0a3c59;
+			background: #65a9d7;
+			color: #fff;
+		}
 </style>
 </head>
  
@@ -198,8 +224,8 @@ table.inner{border: 0px}
 		 
 		<tr>
 		<td colspan="2" align="center">
-		<input type="submit" value="Submit">
-		<input type="reset" value="Reset">
+		<input class ="button" type="submit" value="Submit">
+		<input class ="button" type="reset" value="Reset">
 		</td>
 		</tr>
 		</table>
