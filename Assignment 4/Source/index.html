@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- load bootstrap (bootswatch version) -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<!-- load angular, ngRoute, ngAnimate -->
+	<!-- <script src="http://code.angularjs.org/1.2.13/angular.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script> -->
+    
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.js"></script>
+	<script src="js/app.js"></script>
+<style>	<!--	html {
+		background: url('img/wood_pattern.png');
+		font-size: 10pt;
+	}-->	</style>
+</head>
+
+<!-- apply our angular app -->
+<body ng-app="animateApp" onload="defalert()">
+
+    <h1 align ="center" style="font-family:calibri;color:#ffffff" >Stock Analysis</h1>
+    	<div align="center" style="height: 195px" style="width: 170px">
+
+	<img style="height: 100%;opacity: 0.6" src="img/stock-market-crashes.jpg" >
+    <div class="{{ pageClass }}" ng-view></div>
+		
+</body>
+</html>
+<script>
+function defalert(){
+
+name = localStorage.getItem("username");
+    if (name == null || name == "null"){
+      alert("Hi, Stranger!");
+    } else {
+      alert ("Welcome, " + name + "!");
+    }
+};
+
+google.load('visualization', '1', { 'packages': ['map'] });
+google.setOnLoadCallback(drawMap);
+
+    function drawMap() {
+		var data = google.visualization.arrayToDataTable([
+        ['Country', 'Capitals'],
+        ['China', 'Beijing'],
+        ['India', 'Delhi'],
+        ['US', 'Washington D.C'],
+        ['Indonesia', 'Jakarta'],
+        ['Brazil', 'Brasilia'],
+        ['Pakistan', 'Pakistan'],
+        ['Nigeria', 'Nigeria'],
+        ['Bangladesh', 'Bangladesh'],
+        ['Russia', 'Russia'],
+        ['Japan', 'Japan']
+		]);
+		var options = { showTip: true };
+
+    var map = new google.visualization.Map(document.getElementById('chart_div'));
+
+    map.draw(data, options);
+  };
+</script>

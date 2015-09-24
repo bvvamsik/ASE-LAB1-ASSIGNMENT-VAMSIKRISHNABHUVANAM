@@ -1,0 +1,25 @@
+<h1 style="font-family: calibri;color:black;font-weight:bold">Signup yourself by filling the following details</h1>
+<table>
+<tr>
+	<td><div style="font-family: calibri;color:black;font-size:120%;font-weight:bold">UserName: </div></td>
+	<td><div><input type="text" ng-model="username" placeholder="eg: abc@<domain>.com"></div></td>
+</tr>
+
+<tr>
+	<td><div style="font-family: calibri;color:black;font-size:120%;font-weight:bold">Password: </div></td>
+	<td><div><input type="password" ng-model="password" placeholder="********"></div></td>
+</tr>
+
+<tr>
+	<td><div style="font-family: calibri;color:black;font-size:120%;font-weight:bold">Re-Enter Password: </td>
+	<td><input type="password" ng-model="password2" placeholder="********"></div></td>
+</tr>
+	
+<tr>
+	<td colspan="2" align="center"><button ng-click="signUp()" style="font-family: calibri;">Signup</button></td>
+</tr>
+
+</table>
+
+<span data-ng-bind="errorMsg"></span>
+<p style="font-family: calibri;color:black;font-size:120%">If you are a returning user or already registered, please <a href="#login" class="btn btn-link" style="font-family: calibri;">Login</a></p>
