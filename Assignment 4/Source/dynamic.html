@@ -1,0 +1,41 @@
+<html>
+<head>
+<script>
+google.load('visualization', '1', { 'packages': ['map'] });
+google.setOnLoadCallback(drawMap);
+</script>
+	<script src="js/controller.js"></script>
+	<script src="js/chart.js"></script>
+	
+	</head>
+<body ng-app="LineCtrl">
+	<table>
+	<tr>
+		   <div class="row">
+			  <div class="col-md-9" id="line-chart" ng-controller="LineCtrl">
+				<div class="panel panel-default" >
+				  <select ng-model="selec">
+					<option value="aapl">AAPL(Apple)</option>
+					<option value="goog">GOOG(Google)</option>
+					<option value="amzn">AMZN(Amazon)</option>
+				  </select>
+				  <div class="panel-body">
+					<canvas id="line" class="chart chart-line chart-xl" data="data" labels="labels" legend="true"
+					click="onClick()" series="series"></canvas>
+				  </div>
+				</div> 
+			  </div>
+
+			  <div class="col-md-3" id="txtfield" ng-controller="LineCtrl">
+				<form class="form-horizontal" role="form">
+				 <div class="form-group">
+				  <label for="dates" class="col-sm-7 control-label">Date</label>
+				  <div class="col-sm-5">
+				   <input type="text" class="form-control" id="dates" ng-model="selecDate"
+				   placeholder="  "  readonly>
+				 </div>
+	</tr>
+	</table>
+</body>
+
+</html>
