@@ -1,0 +1,66 @@
+ion-pane.pane {
+    background-color: #848484;
+    
+}
+
+div.row, div.col {
+    padding: 0;
+}
+
+div.col {
+    margin-right: 10px;
+}
+
+div.col-last {
+    margin: 0;
+}
+
+div.card {
+    margin: 10px;
+}
+
+.weather-icon {
+    text-align: center;
+}
+
+#map-canvas {
+    width: inherit;
+    margin: 0 0 15px;
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    #map-canvas {
+        height: 200px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    #map-canvas {
+        height: 300px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    #map-canvas {
+        height: 350px;
+        margin: 0 0 30px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    #map-canvas {
+        height: 400px;
+        margin: 0 0 30px;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    #map-canvas {
+        height: 450px;
+    }
+}

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>WeatherOrNot!</title>
+
+    <link href="http://code.ionicframework.com/1.0.0-rc.5/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="http://code.ionicframework.com/1.0.0-rc.5/js/ionic.bundle.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <script src="js/weatherOrNotModule.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+</head>
+<body ng-app="weatherModule" ng-controller="weatherCtrl">
+
+<ion-pane>
+    <ion-header-bar class="bar bar-header bar-dark">
+        <h1 class="title">DirecRoute</h1>
+    </ion-header-bar>
+    <ion-content class="padding">
+    <div>
+    <h1 class="subtitle">Welcome to my Sample Application</h1></div>
+    </ion-content>
+    <ion-content class="padding">
+        <div id="map-canvas"></div>
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" ng-model="startlocation" placeholder="Start Location">
+            </label>
+            <label class="item item-input">
+                <input type="text" ng-model="endlocation" placeholder="End Location">
+            </label>
+        </div>
+        <button class="button button-block button-dark" ng-click="getDirection(startlocation, endlocation)">
+            GET &nbsp;&nbsp; <i class="icon ion-android-car"></i> Route &nbsp;&nbsp;and&nbsp;&nbsp; <i class="icon ion-ios-partlysunny"></i> Weather for &nbsp;{{startlocation}} and {{endlocation}}
+        </button>
+        <div class="row" ng-show="submitted">
+            <div class="col">
+                <div class="card">
+                    <div class="item item-divider">
+                        Weather of Start Location: <br/>{{startlocation}}
+                    </div>
+                    <div class="item item-text-wrap">
+                        <div ng-bind-html="startWeather"></div>
+                        <div class="weather-icon" ng-bind-html="startIcon"></div>
+                    </div>
+                    <div class="item item-divider">
+                        <div ng-bind-html="distkmiles"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="item item-divider">
+                        Weather of End Location: <br/>{{endlocation}}
+                    </div>
+                    <div class="item item-text-wrap">
+                        <div ng-bind-html="endWeather"></div>
+                        <div class="weather-icon" ng-bind-html="endIcon"></div>
+                    </div>
+                                        <div class="item item-divider">
+                        <div ng-bind-html="distmiles"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </ion-content>
+</ion-pane>
+</body>
+</html>
